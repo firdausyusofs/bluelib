@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:bluelib/bluelib.dart';
 import 'package:bluelib/device_info.dart';
-import 'package:csv/csv.dart';
+// import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:path_provider/path_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,14 +58,14 @@ class _MyAppState extends State<MyApp> {
       ])
     ];
 
-    String csv = const ListToCsvConverter().convert(csvData);
-    final directory = await getApplicationDocumentsDirectory();
-    // Unique file name
-    final filename = '${directory.path}/devices_${DateTime.now().millisecondsSinceEpoch}.csv';
-    final file = File(filename);
-    await file.writeAsString(csv);
+    // String csv = const ListToCsvConverter().convert(csvData);
+    // final directory = await getApplicationDocumentsDirectory();
+    // // Unique file name
+    // final filename = '${directory.path}/devices_${DateTime.now().millisecondsSinceEpoch}.csv';
+    // final file = File(filename);
+    // await file.writeAsString(csv);
 
-    print('CSV file generated at: $filename');
+    // print('CSV file generated at: $filename');
   }
 
   @override
